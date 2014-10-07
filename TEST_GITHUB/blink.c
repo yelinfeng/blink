@@ -40,19 +40,5 @@ int main(void) {
 		while(i != 0);
 	}
 
-	for(;;) {
-		volatile unsigned int i;	// volatile to prevent optimization
 
-		P1OUT ^= 0x01;				// Toggle P1.0 using exclusive-OR
-
-		i = 10000;					// SW Delay
-		do i--;
-		while(i != 0);
-
-		P1OUT ^= 0x01;				// Toggle P1.0 using exclusive-OR
-
-		i = 10000;					// SW Delay
-		do i--;
-		while(i != 0);
-	}
 }
